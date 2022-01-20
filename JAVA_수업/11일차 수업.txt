@@ -1,0 +1,67 @@
+## 수업
+
+자바 (객체지향언어)
+1. if/ else, for, while, 배열 (공통)
+2. 메소드, 클래스 (객체지향언어 특징)
+3. 제네릭 컬렉션 (자바특징)
+
+자바 문자 비교하기
+String == 은 비교하고자 하는 두개의 대상의 주소값을 비교함.
+ex) 철수와 영희가 같은 빌라에 살때 주소값을 비교하고 상세주소는 비교안한다.
+(*Call by Reference)
+
+equals는 비교하고자 하는 두개의 대상의 값 자체를 비교.
+(*Call by Value)
+
+##배열
+     int array[] = {2,4,6,9};
+	 System.out.println(array[1]);// 첫번째 배열(인덱스)호출
+	 System.out.println(array.length);// 배열 길이 호출
+	 System.out.println(array[4]);//에러 0부터 시작하기때문
+		
+	 for(int i=0; i<array.length; i++) {
+	 System.out.println("배열에 있는 인덱스 값은 : "+array[i]);
+
+array[1] = 첫번째 배열(인덱스)호출
+array.length = 배열길이 
+
+배열 문제
+//배열길이 만큼 홀수 판단
+		int array[] = {2,4,6,9};
+		for(int i=0; i<array.length; i++) {
+			if( array[i] % 2 != 0) {
+				System.out.println("홀수 값은 : "+array[i]);
+			}			
+		}
+		//배열 짝수 구하기
+		for(int i = 0; i<array.length; i++) {
+			if(array[i] % 2 == 0) {
+				System.out.println("짝수 값은 : "+array[i]);
+			}
+		}
+		//배열인덱스 값 모두 더하기
+		int sum=0;
+		for(int i = 0; i<array.length; i++) {
+			sum += array[i];
+		}
+		System.out.println("인덱스 값을 더한 값은 : "+sum);
+
+//배열을 왜 쓰는지?
+		int x = 100; // 100번 만들어라!
+		int x1 = 100;
+		int array[] = {10,7};//선언식 배열
+		int size = array.length;//결과는 4
+		int y = array[0];// 0번째 인덱스 데이터를 y에 대입 = 10
+		int z = array[1];// 1번째 인덱스 데이터를 대입 =7
+		int a = array[2];// 오류남
+		//{10,7}
+		int temp = 0;
+		temp = array[1];// tmep =7
+		array[1] = array[0];// array[1] = 10 배열값은 {10,10}
+		array[0] = temp;// array[0]= 7 배열값은 {7,10}
+		//{10,7,3}
+		//array[1] = array[2] + array[0];
+		//=> 배열1의값은? 13
+		array[0] = array[2]; // array[] = { 3,7,3 }
+		array[2] = array[0]; // array[] = { 3,7,3}
+		//array 2의 값은? 3

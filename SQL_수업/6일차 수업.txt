@@ -1,0 +1,84 @@
+##복습
+group by
+-> select 절에 group이 되는 컬럼이 위치.
+
+select
+<컬럼 이름>
+from <테이블 이름>
+where<조건>
+group by <컬럼 이름>
+having <통계 함수>
+order by <정렬할 컬럼 > desc(내림차순) , asc(오름차순)
+(정렬하려는 select 절에 순번을 입력해도 정렬됨)
+
+*연산자는 where절에 온다.
+관계 연산자 : !=, =, >, <, >=, <=
+논리 연산자 : and, or
+문자 연산자 : like
+
+*통계함수는 select절 및 그룹핑시 having절에 온다.
+max, min, sum, avg, count(*)
+
+다중행 함수
+-group by 및 통계함수가 있다
+
+부서별 직책별 ( ~별 일때는 그룹핑)
+조회 및 추출 (select)
+제외하고 (where)
+인원수 이하,이상 (having)
+순서대로 (order by)
+
+쿼리순서
+from -> where -> group by -> having -> select -> order by
+
+##수업
+
+***ifnull
+->데이터가 null인 행에 임의 데이터 넣는다.
+(데이터를 UPDATE하는게 아님)
+ex) ifnull(comm, 100)
+
+*****DATE_FORMAT
+날짜 함수
+select
+    DATE_FORMAT(HIREDATE,'%Y')
+from emp
+
+DATE_FORMATdmf 을 활용한 그룹핑 방법
+select
+    DATE_FORMAT(HIREDATE,'%Y')
+from emp
+group by DATE_FORMAT(HIREDATE,'%y')
+
+#AND, OR (AND부터 해석함)
+where 조건에 동시에 사용할때 가 있음.
+1. AND (먼저 실행)
+2. OR을 먼저 실행 하려면 ()로 덮어준다
+
+###고급쿼리 (JOIN, Subquery)
+JOIN을 알기전에 알아야 하는 개념.
+->Foreign key
+
+
+JOIN (교집합만 가져온다)
+-> 두 개 이상의 테이블을 조회할때 사용
+ 단) 조회 하고자 하는 테이블들이 관계가 있어야함
+ 
+--조인하는 방법 1.
+select 
+	ENAME 
+from emp e, dept d
+where e.DEPTNO  = d.DEPTNO 
+
+--조인하는 방법 2.
+select 
+	ENAME
+from emp as e
+join dept as d
+on e.DEPTNO  = d.DEPTNO
+
+on (어느 테이블에 컬럼을 볼건지)
+-> e.<컬럼 이름> = d.<컬럼 이름>
+
+DNAME : 부서이름
+LOC : 근무지

@@ -1,0 +1,126 @@
+## 복습
+
+JOIN
+->두 개 이상의 테이블을 조회할때 사용
+
+조인하는 방법 1.
+select
+    *
+from emp as e, dept as d
+where e.DEPTNO = d. DEPTNO
+
+조인하는 방법 2.
+select
+ *
+ from emp as e
+ JOIN dept as d
+ on e.DEPTNO = d.DEPTNO
+ where e.DEPTNO = 30
+
+### 7일차 수업
+
+limit 
+-> 출력되는 결과 행의 수를 제한 
+-> order by 마지막 순으로 온다
+-> 게시판 만들때 limit 사용한다
+select
+ *
+ from emp
+ limit 0,10
+
+ ** 조인 종류
+ INNER JOIN (내부조인 혹은 조인)
+ => 두 테이블을 조회할 때, 두 테이블에 모두 지정한 데이터 조회
+
+ OUTER JOIN(외부조인)
+ => 두 테이블을 조회할 때, 1개의 테이블에만
+ 데이터가 있어도 조회
+
+ SELF JOIN(자체조인)
+ => 자신이 자신과 조이느 1개의 테이블 사용
+
+ ** OUTER JOIN(외부조인) 종류
+1. LEFT OUTER JOIN
+=> 왼쪽 테이블의 모든 값이 출력되는 조인
+2. RIGHT OUTER JOIN
+-> 오른쪽 테이블의 모든 값이 출력되는 조인
+3. FULL OUTER JOIN(MYSQL에 없음)
+-> 왼쪽 또는 오른쪽 테이블의 모든 값이 출력
+
+문법 ex)
+
+select
+<컬럼 목록>
+from <첫번째 테이블 이름>
+<LEFT or RIGHT> JOIN <두번째 테이블 이름>
+on <조인조건>
+where
+....
+
+사용시기
+ex)
+ 쇼핑몰 사이트에서 회원가입은 했는데
+ 구매이력이 없는 회원 조회할 때
+
+LEFT or RIGHT 사용시기
+찾고자 하는 데이터가 교집합이 아닐때
+왼쪽에 있으면 LEFT, 오른쪽에 있으면 RIGHT
+
+1.INNER JOIN 코딩.
+2.내가 찾고자하는 테이블 위치를 확인.
+3.LEFT or RIGHT를 사용할지 확인.
+
+**SELF JOIN
+-> 별도의 문법이 있는 것은 아님.
+INNER JOIN과 문법 동일.
+즉, 동일 테이블을 두번 조인 (INNER JOIN으로)
+
+1) 사원들의 사수 이름과 번호를 조회.
+2) 상사들의 사원 조회
+
+***** 다중조인
+문법
+
+select
+ <컬럼 목록>
+ from < 테이블 별칭 A>
+ (INNER or RIGHT or LEFT) JOIN < 테이블 별칭 B>
+ on <조인 조건>
+  (INNER or RIGHT or LEFT) JOIN < 테이블 별칭 C>
+on <조인 조건>
+where, group by, having, order by...
+
+다중조인 순서
+from 맨 위 조인부터 실행
+
+*서브쿼리
+-> 하나의 쿼리 문장 내에 포함된
+또 하나의 쿼리
+-> from 서브쿼리를 많이 씀
+
+규칙
+1. 반드시() 괄호로 묶음
+select
+ (select)
+from A table
+2. 서브쿼리가 먼저 ****실행된 후 외부쿼리와 비교 / 연산
+3. 서브쿼리가 가능한 곳
+ 3-1. select절 (스칼라 서브쿼리)
+ 3-2. **from절 (인라인 뷰)
+ 3-3. where절 (중첩 서브쿼리)
+ 3-4. having
+ 3-5. order by
+ 3-6. INNER VALUES (MYSQL 실행 안됨)
+ 3-7. UPDATE SET (MYSQL 실행 안됨)
+
+ 4. 서브쿼리 종류
+단일 서브쿼리
+
+
+
+
+다중행 서브쿼리,
+delete,
+모델링 (table create 하는 작업) -> Spring 시간에
+-> 모델링에서 PK, FK 작업을 여기서 함.
+테이블의 데이터타입 -> 자바시간

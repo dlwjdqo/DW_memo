@@ -1,0 +1,61 @@
+사설IP (privateIP)
+모든 사람들이 쓸 수 있는 IP를 의미함
+
+공인IP
+인터넷에 실제 IP
+
+로컬
+본인 PC를 의미한다
+
+로컬주소
+127.0.0.1 디폴트 값을 의미한다
+localhost ( 본인 IP를 의미 )
+
+데이터베이스
+-> 데이터베이스 종류는 여러개 문법은 같음 
+-> 오라클, ( MYSQL, Maria DB )
+-> 데이터베이스를 잘배우는게 중요!
+   ( 웹, 앱 , IOT, 데이터분석분야, AI )
+   *공통점 *데이터가 있어야 한다.
+   *모든 어플리케이션의 시작점!
+
+Port : 서버에 접속할 수 있는 문
+   ex) (192.168.0.32:80)
+        : 뒷 숫자가 port 즉 문이다  
+
+my SQL (관계형 DB (*RDB)라고 한다)
+->안에 여러개의 DB가있고 DB안에 table들이있고 table안에 data가 있다.
+DB -> table -> data
+table들은 서로 관계가 있다 독립성이 없음
+
+
+
+DB 종류
+관계형 DB ( 웹, 앱 개발시 사용 )
+비관계형 DB (AI 개발시 사용)
+
+데이터 타입
+-> 문자 와 정수를 컴퓨터는 모르기 때문에 타입 설정을 해야한다
+숫자 - int
+문자 - VARCHAR
+
+bit란 컴퓨터 최소단위라고 한다
+1byte는 8bit다. 8bit는 2에8승으로 256이다.
+
+*** DDL(Data Definition Language)
+CREATE TABLE <table_name> : table 생성
+DROP TANLE <table_name> : table 삭제
+ALTER TABLE <table_name> : table 수정 ( 테이블 이름 변경할때 씀)
+
+*** DML(Data Manipulation Language) 데이터 조작 언어
+SELECT : 데이터 조회
+DELETE : 데이터 삭제
+UPDATE : 데이터 수정
+INSERT : 데이터 생성
+
+DCL (Data Control Language) 데이터 제어 언어
+GRANT : 특정 사용자에게 권한 부여
+REVOKE : 특정 사용자 권한 회수
+
+쿼리 순서
+from -> where -> select

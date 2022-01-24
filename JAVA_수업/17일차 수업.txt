@@ -52,3 +52,13 @@ class Pizza{
    절대(never) 다른 함수를 정의하지 않는다.
 4. 클래스이름 뒤에 VO(Value Object)를 붙이자
    클래스이름 뒤에 DTO(Date Transfer Object)를 붙이자
+
+UML (Unified Modeling Language)
+통합 모델링 언어.
+즉, 모델을 만드는 표준언어.
+
+소프트웨어 초기 스케치 작업
+****사용하는 이유
+1. 다른 사람들과 의사소통 또는 설계 논의
+2. 전체 시스템 파악
+3. 유지보수를 위한 설계의 back-end 문서

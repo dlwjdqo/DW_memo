@@ -74,3 +74,33 @@ HTML -> 웹 서버 -> DB 서버 (My SQL)
 
 1. 웹 서버
 2. DB 서버
+
+SQL 복습
+
+****DML : 데이터 조작 언어
+
+1. SELECT
+2. DELETE
+3. UPDATE
+4. INSERT
+
+테이블 : 실제 데이터를 저장하는 공간
+데이터베이스 : 실제 테이블을 저장하는 공간
+
+데이터베이스 -> 테이블 -> 데이터
+
+SELECT 컬럼들,
+FROM 테이블 이름
+WHERE 필터링 조건 ( >, =, <, like, AND, OR)
+GROUP BY 데이터를 그룹화 할 때
+HAVING 그룹된 데이터에서 집계합수(sum,avg,min,max) 사용할 때
+ORDER BY 정렬 ASC(오름차순 디폴트 값), DESC(내림차순)
+LIMIT 데이터 row 강제로 자를 때
+
+쿼리순서
+FROM -> WHERE -> GROUP BY -> HAVING -> SELECT -> ORDER BY
+
+SELECT
+    *
+FROM emp
+WHERE SAL > 3000;

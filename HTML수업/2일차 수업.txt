@@ -90,5 +90,6 @@ distinct(컬럼)
 IF함수
 IF(조건식,true,false)
 조건식이 맞으면 true 틀리면 false
+SUBSTRING (1) 1부터 시작 JAVA에서는 0부터 시작
 
 ** 모든 프로그래밍 언어에는 문자열 함수가 존재

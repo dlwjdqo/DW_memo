@@ -87,6 +87,10 @@ FORM :
 중복제거 함수
 distinct(컬럼)
 
+다중조건 함수 IN
+or조건이 많을 때 IN을 써서 한번에 입력
+ex) WHERE NAME IN ('홍길동','아이유','유재석')
+
 IF함수
 IF(조건식,true,false)
 조건식이 맞으면 true 틀리면 false

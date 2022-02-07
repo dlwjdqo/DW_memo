@@ -1,0 +1,23 @@
+### 수업내용 정리
+
+ul태그
+<ul> Unorder List
+  <li>
+    <a href="쇼핑몰주소">상의</a>
+  </li> List Item 태그
+  <li>
+    <a href="쇼핑몰주소">하의</a>
+  </li>
+  <li>신발</li>
+  <li>모자</li>
+</ul>
+
+ol태그 (사용 빈도수 적음)
+<ol> Order List
+  <li>JAVA<li>
+  <li>Python<li>
+  <li>HTML<li>
+  <li>SQL<li>
+</ol>
+
+

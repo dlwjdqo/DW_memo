@@ -20,4 +20,10 @@ ol태그 (사용 빈도수 적음)
   <li>SQL<li>
 </ol>
 
+div태그 (80%이상 사용함)
 
+css란?
+태그에 style을 입력해준 것
+ex) 1. <div style="">
+    2. <tittle></tittle?
+       div{ 컬러삽입}

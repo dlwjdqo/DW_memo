@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+      <script>
+      //자바스크립트 메소드
+      function doSuccess() {
+        alert('예약 완료!');
+      }
+      function doFail() {
+        alert('예약 취소!');
+      }
+    </script>
+</head>
+<body>    
+  <div class="container">      
+      <div class="book-form">
+          <label for="to">예약자 이름 :</label>     
+          <input type="text" placeholder="이름을 입력하세요"/>
+          <label for="to">예약자 전화번호 :</label>
+          <input type="number" placeholder="전화번호를 입력하세요"/>
+          <label for="to">입실 시간</label>
+          <input type="date">
+          <input type="time">
+          <label for="to">퇴실 시간</label>         
+          <input type="date">
+          <input type="time">
+          <label for="to">인원 선택</label>
+          <input type="number" placeholder="인원 수를 선택하세요" max="12"/>
+          <label for="to">객실선택</label>
+          <select name="" class="option">
+            <option value="">-- choice room --</option>
+            <option value="101">101 풀빌라(복층) 150,000원</option>
+            <option value="102">102 풀빌라(복층) 150,000원</option>
+            <option value="103">103 풀빌라(복층) 150,000원</option>
+            <option value="104">104 키즈 풀빌라(단독) 170,000원</option>
+            <option value="105">105 독채 풀빌라(수영장)  220,000원</option>                     
+          </select>
+          <label for="to">옵션선택</label>   
+          <select name="" class="option">
+            <option value="">-- choice option --</option>
+            <option value="바베큐">개별바베큐 20,000원</option>
+            <option value="세트">바베큐 세트(고기,술 무한제공) 100,000원</option>
+            <option value="수영장">미온수 32도 50,000원 </option>
+            <option value="조식">아침조식(갈비탕) 2인 15,000원 </option>
+            <option value="조식">아침조식(브런치) 20,000원</option>
+            <option value="픽업">벤 픽업 20,000원</option>            
+          </select>        
+          <input class="true" type="button" value="예약 완료" onclick="doSuccess()"/>
+          <input class="false" type="button" value="예약 취소" onclick="doFail()"/>
+      </div>      
+  </div>
+</body>
+</html>

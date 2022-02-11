@@ -36,7 +36,7 @@
     flex-direction: column (좌측배치)
     flex-direction: row (상단배치)
 
-    검색엔진(SEO)
+    검색엔진(SEO) 
 
  **overflow : 컨텐츠가 너무커서 요소내에 
               모두 보여주기 힘들 때 사용.

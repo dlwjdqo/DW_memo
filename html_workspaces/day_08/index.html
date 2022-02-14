@@ -1,0 +1,48 @@
+o<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+   <style>
+     * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+     }
+     .black {
+         width: 500px;
+         height: 300px;
+         background-color: black;
+         position: relative;
+         margin: auto;
+     }
+     .red {
+         position: absolute;
+         width: 250px;
+         height: 150px;
+         background-color: red;         
+         margin: 30px;
+     }
+     .white {
+         position: absolute;
+         width: 100px;
+         height: 100px;
+         background-color: white;         
+         margin-left: 400px;
+     }
+   </style>
+<body>
+    <!-- container는 body 태그라 생각 -->
+  <div class="container">
+    <!-- margin,padding,position만 사용해서 레이아웃 작성 -->
+    <!-- width,height,background-color,(top, bottom,left, right) -->
+    <div class="black">
+        <div class="red"></div>
+        <div class="white"></div>
+    </div>
+  </div>
+</body>
+</html>

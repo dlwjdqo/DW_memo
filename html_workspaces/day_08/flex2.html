@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      *{
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+      }
+      .black {
+        display: flex;
+        flex-direction: column;
+        width: 480px;
+        height: 400px;
+        background-color: black;
+        position: relative;
+        margin: 50px auto;
+      }
+      .item {          
+        width: 480px;
+        height: 80px;          
+        border: 10px solid;                       
+        text-align: center;
+        font-weight: 600;
+        font-size: 50px;
+      }
+      .white1 {
+        background-color: white;
+      }
+      .white2 {
+        background-color: white;
+      }  
+      .white3 {
+        display: flex;
+        background-color: white;
+      }
+      .white4 {
+        background-color: white;
+      }
+      .white5 {
+        background-color: white;
+      }
+      .black-white1 {
+        border: solid;
+        background-color: black;
+        color: white;
+        margin: 0 auto;
+      }  
+    </style>
+</head>
+<body>
+   <div class="container">
+       <div class="black">
+           <div class="item white1">1</div>
+           <div class="item white2">2</div>
+           <div class="item white3">
+               <div class="black-white1">3-1</div>
+               <div class="black-white1">3-2</div>
+               <div class="black-white1">3-3</div>
+           </div>
+           <div class="item white4">4</div>
+           <div class="item white5">5</div>
+       </div>
+   </div>
+</body>
+</html>

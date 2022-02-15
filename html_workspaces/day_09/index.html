@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .card-container {
+        display: flex;
+        width: 1000px;
+        height: 400px;
+        /* margin : 위&아래 오른쪽&왼쪽 */
+        margin: 100px auto;
+      }
+      .item {
+        /* 아이템 태그에 flex :1을 하면 아이템들이 동일한 크기를 가지게 됨 */
+        flex: 1;
+        position: relative;
+        height: 100%;
+        padding: 25px;
+        /* item 태그 하위 글자는 모두 white로 변경 됨 */
+        color: white;
+        transition: 0.6s;
+      }
+      .item:hover {
+        flex-grow: 2.5;
+      }
+      .item:hover .caption {
+        /* none의 반대는 block */
+        display: block;
+      }
+      .item:nth-child(1) {
+        background-color:red;
+      }
+      .item:nth-child(2) {
+        background-color: blue;
+      }
+      .item:nth-child(3) {
+        background-color: rgb(255, 174, 0);
+      }
+      .item h2 {
+        font-size: 24px;
+        font-weight: 700;
+        /* 글자 가운데 정렬 */
+        text-align: center;
+      }
+      .caption {
+        display: none;
+        font-size: 12px;
+        margin: 28px 0;
+        max-width: 230px;
+      }
+      .caption button {
+        border: 1px solid #fff;
+        border-radius: 30px;
+        background: transparent;
+        padding: 8px 18px;
+        color: #fff;
+        font-size: 14px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+      .item img {
+        position: absolute;
+        width: 150px;
+        right: 0;
+        bottom: 0;
+      }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card-container">
+        <div class="item">
+            <h2>아스널</h2>
+            <div class="caption">
+                <p>패싱플레이 대표적인 팀이다.</p>
+                <button>팀 선택</button>
+            </div>
+            <img src="아스널.PNG" alt="">
+        </div>
+        <div class="item">
+            <h2>토트넘</h2>
+            <div class="caption">
+                <p>세트피스 및 역습에 대표적인 팀이다.</p>
+                <button>팀 선택</button>
+            </div>
+            <img src="토트넘.PNG" alt="">
+        </div> 
+        <div class="item">
+            <h2>울버햄튼</h2>
+            <div class="caption">
+                <p>피지컬의 대표적인 팀이다.</p>
+                <button>팀 선택</button>
+            </div>
+            <img src="울버햄튼.PNG" alt="">
+        </div>         
+    </div>
+  </div>
+</body>
+</html>

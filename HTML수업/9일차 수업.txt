@@ -1,0 +1,74 @@
+###수업
+
+(SQLD, 정보처리 기능사, 컴활 1급)
+DML
+    INSERT
+    DELETE
+    SELECT
+    UPDATE
+DDL
+    CREATE
+    DROP
+    ALTER
+TCL
+    COMMIT (DML은 커밋 미포함, DDL은 커밋 포함)
+    ROLLBACK
+    -> 홍길동이 DB접속 INSERT 5번 날리고 COMMIT
+    실수로 DELETE 했을 때 ROLLBACK을 이용해서 최신 COMMIT상태로 돌아감
+DCL
+    GRANT
+    REVOKE
+
+-관계형 데이터베이스 (R(관계)DBMS)
+*데이터를 더욱 안전하게 저장.
+JOIN이 있다
+부모테이블과 자식테이블이 존재
+ex) emp테이블에 deptno 컬럼이 있음.
+    deptno컬럼은 dept테이블에서 옴
+
+    emp테이블(자식)은 dept테이블(부모)을 참조하고 있음.
+
+ CREATE TABLE emp(테이블_이름)
+ (
+   empno int(11),
+   ename varchar(20),
+   deptno int(5),
+   foreign Key (deptno) references dept(deptno)
+   on delete cascade
+ ) 
+   (참조키(외래키)는 컬럼이름이 중요한게 아니라, 
+   데이터 타입이 같아야 한다.)
+   조건 : 고유한 데이터를 가진 컬럼을 참조 해야한다.
+
+   규칙
+   **on delete (이벤트):
+   -> 부모 데이터에 삭제 이벤트가 발생하면
+    자식 데이터에 이벤트 발생
+
+   **on update (이벤트):
+   -> 부모 데이터에 수정 이벤트가 발생하면
+    자식 데이터에 이벤트 발생
+
+    이벤트 종류 (단골 문제 필수암기) : 아래중 하나 선택
+    1. cascade : 자식데이터 삭제 or 수정
+    2. set null : 자식데이터 null 업데이트
+    3. set default : 자식데이터 default 값으로 없데이트
+    4. *restrict(default) : 부모데이터 삭제 or 수정 불가능
+    5. NO ACTION : 자식테이블의 데이터는 변경되지 않습니다.
+ 
+
+-비관계형 데이터베이스(NoSQL)
+대표적인 프로그램 : *Dynamodb, MongoDB
+JOIN이 없다
+**데이터 분석이 목적
+ex)
+ *담당교수가 1명이라고 가정할 때
+
+ (학생 테이블)              (교수테이블)
+ 학생이름                   교수이름
+ 학생나이                   교수번호(기본키)
+ 교수번호(외래키,참조키,FK)  담당과목
+ 전공과목                   연차
+ 학점                   
+ 학번(고유키)
+ 학년

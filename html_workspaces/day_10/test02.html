@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .outer-box {
+        position: relative;
+        width: 500px;
+        height: 500px;
+        background-color: black;
+        margin: 100px auto 0 ;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+      .inner-box {
+        width: 150px;
+        height: 150px;
+        background-color: red;        
+      }
+      .inner-box1 {
+        width: 150px;
+        height: 150px;
+        background-color: red;        
+      }
+      .inner-box2 {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        background-color: white;
+      }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="outer-box">
+      <div class="inner-box"></div>
+      <div class="inner-box1"></div>
+      <div class="inner-box2"></div>
+    </div>
+  </div>
+</body>
+</html>

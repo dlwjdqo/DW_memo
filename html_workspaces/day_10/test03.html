@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .outer-box {
+        width: 100%;
+        height: 100px;
+        background-color: black;
+      }
+      .outer-box1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 500px;
+        height: 300px;
+        background-color: black;
+        margin: 50px auto 0;
+        padding: 20px;
+      }
+      .outer-box2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;        
+        flex-direction: column;    
+        width: 500px;
+        height: 300px;
+        background-color: black;
+        margin: 70px auto 0;
+        padding: 20px;       
+      }
+      .inner-box {
+        width: 100px;
+        height: 200px;
+        background-color: red;
+      }
+      .inner-box1 {
+        width: 100px;
+        height: 200px;
+        background-color: red;
+      }
+      .inner-box2 {
+        width: 100px;
+        height: 200px;
+        background-color: red;
+      }
+      .in-box {
+        width: 400px;
+        height: 50px;
+        background-color: white;
+      }
+      .in-box1 {
+        width: 400px;
+        height: 50px;
+        background-color: white;
+      }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="outer-box"></div>
+    <div class="outer-box1">
+        <div class="inner-box"></div>
+        <div class="inner-box1"></div>
+        <div class="inner-box2"></div>
+    </div>
+    <div class="outer-box2">
+        <div class="in-box"></div>
+        <div class="in-box1"></div>
+    </div>
+  </div>
+</body>
+</html>

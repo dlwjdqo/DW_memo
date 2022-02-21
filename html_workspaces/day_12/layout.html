@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .soccer {
+        width: 80%;
+        margin: auto;        
+      }
+      .intro {
+        text-align: center;
+      }
+      .intro h1 {
+        font-size: 36px;
+        font-weight: 600;
+      }
+      .intro p {
+        color: #777;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+        margin-top: 10px;
+      }
+      .row {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2%;
+      }
+      .soccer-col {
+        flex-basis: 30%;
+        border-radius: 10px;
+        text-align: left;
+        margin-bottom: 5%;
+      }
+      .soccer-col img {
+        width: 100%;
+        height: 70%;
+        border-radius: 10px;
+      }
+      .soccer-col h3 {
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+    </style>
+</head>
+<body>
+   <div class="container">
+     <section class="soccer">
+         <!-- intro 소개글이 있는 박스 -->
+         <div class="intro">
+            <h1>JB 아트사커</h1>
+            <p>JB 아트사커를 소개합니다!</p>
+         </div>
+         <!-- row : 사진을 담는 박스 -->
+         <div class="row">
+            <!-- soccer-col : flex item 박스 -->
+            <div class="soccer-col">
+                <img src="img/훈련장.jpg" alt="">
+                <h3>훈련장</h3>
+                <p>국내 최고의 훈련장을 보유하고 있습니다.</p>
+            </div>
+            <div class="soccer-col">
+                <img src="img/전술.jpg" alt="">
+                <h3>전술 시스템</h3>
+                <p>각 포지션 전술 시스템 교육과정 입니다.</p>
+            </div>
+            <div class="soccer-col">
+                <img src="img/트레이너.png" alt="">
+                <h3>트레이너</h3>
+                <p>선수출신 트레이너로 구성되어 있습니다.</p>
+            </div>
+         </div>
+     </section>
+   </div>
+</body>
+</html>

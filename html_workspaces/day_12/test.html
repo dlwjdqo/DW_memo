@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }           
+      .out-box {
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 80%;  
+        height: 200px;      
+        background-color: black;
+        margin-bottom: 50px;
+      }
+      .inner-box {
+        /* flex-basis : 아이템 초기 크기 설정 
+           flex : 1 을 하게 되면 모든 아이템 크기가
+           flex-basis : 100%된 것 처럼 행동*/
+        /* flex-basis: 100%; */
+        /* flex: 1; */
+        flex-basis: 30%;
+        width: 150px;
+        height: 200px;
+        background-color: aqua;
+        border: 2px solid black;
+      }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <section class="out-box">
+        <div class="inner-box"></div>
+        <div class="inner-box"></div>
+        <div class="inner-box"></div>
+    </section>
+    <section class="out-box">
+        <div class="inner-box"></div>
+        <div class="inner-box"></div>
+        <div class="inner-box"></div>
+    </section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+### 수업
+
+EXISTS : 서브쿼리가 TRUE면 메인쿼리 실행
+        FALSE면 실행 안함 (update시 사용함)
+
+NOT EXISTS : 서브쿼리가 FALSE면 실행
+
+ex)
+    select
+        *
+    FROM emp
+    WHERE EXISTS (
+        select *
+        FROM emp WHERE
+        job = 'manager'
+    )
+
+사용예시
+--카카오뱅크
+    update 백업실행
+    set 백업날짜 = '220222'
+    WHERE EXISTS
+    (
+        select * from 입출금내역
+    )
+
+ 모델링
+ => EMP, DEPT
+
+ (부서테이블 없다고 가정)
+ 테이블 이름 : EMP
+ empno, ename, dname, loc
+ ------------------------
+ 100, 홍길동, 개발팀, 대전
+ null, null, 기획팀, 대전
+ *테이블에 null 데이터가 많으면 정규화(모델링)고려 대상
+
+ *update -> (delete -> insert)
+
+PK, FK 정의
+ PRIMARY KEY(PK)
+ -> 중복 허용 X
+ -> 자동으로 인덱스가 붙음.
+
+ FOREIGN KEY(FK)
+ -> 중복 허용 O -> 중복 허용 X (unique key)
+ -> 인덱스 없음
+ -> index를 생성해야 함.
+ 문법)
+ CREATE INDEX <인덱스명>
+ ON <테이블명> ( 칼럼명1, 칼럼명2, ...);
+
+ 문법)
+ CREATE TABLE emp(
+ deptno int,
+ UNIQUE KEY emp(deptno)
+ )
+ CREATE TABLE emp(
+ deptno int UNIQUE KEY
+ )

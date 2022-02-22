@@ -1,0 +1,13 @@
+### 수업
+
+이벤트 종류
+1. cascade
+: 부모 데이터 (삭제or수정)시 자식 데이터 (삭제or수정)
+2. set null
+: 부모 데이터 (삭제or수정)시 자식 데이터 null
+3. set default
+: 부모 데이터 (삭제or수정)시 자식 데이터에 default 값
+4. restrict
+: 부모 데이터 (삭제or수정)시
+  자식 데이터에 (삭제or수정) 불가능
+5. no action : 아무런 변화 없음

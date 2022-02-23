@@ -58,3 +58,15 @@ PK, FK 정의
  CREATE TABLE emp(
  deptno int UNIQUE KEY
  )
+
+ 역정규화
+ 테이블에 데이터가 적을때 테이블을 합쳐도 된다 판단
+
+분산저장 (replication)
+A데이터가 많을때 B에 분산하여 저장하고 주기적으로 A와 B를 동기화 해주며,
+A와 B의 권한을 따로 준다 A는 select만, B는 insert,delete,update 권한부여를 준다
+
+ 테이블설계
+ 정규화
+ 역정규화(선택)
+ 분산저장(선택) 

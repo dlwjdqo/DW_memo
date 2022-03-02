@@ -19,3 +19,31 @@ JavaScript -> Node.js
 
  ..(뒤로가기)
  . (현재경로)
+
+JavaScript 수업
+
+ls : 현재 경로 파일 및 폴더 확인
+cd : 폴더 접속
+   HTML        <->         JAVA, Node.js ... <-> DB 
+(클라이언트) (전송구역,JSON)      ( server )
+
+*JSON(Java Script Object Notation)
+
+변수 
+1. 명사
+2. 복합명사일 때
+   (카멜 표기법)
+   int userInfomation
+3. 데이터 타입이 boolean형일 때
+   변수이름 앞에 is + (명사) 옴
+   ex) isLogin (로그인 여부) true, false
+       isMeal (식사 여부)
+
+리눅스 명령어
+(*주니어 개발자가 알아햐 하는 필수 명령어)
+ls : 현재 경로 파일 및 폴더 확인
+cd : 폴더 접속
+pwd : 현재 경로 확인
+clear : 명령어 내용 삭제
+
+운영체제 : 윈도우, 맥OS, 리눅스....

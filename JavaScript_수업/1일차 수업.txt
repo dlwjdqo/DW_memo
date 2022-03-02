@@ -1,0 +1,21 @@
+IT 용어
+DHCP : 아이피가 유동적으로 바뀜(default)
+(학교, 회사, 카페 등등)
+Static IP : 고정된 아이피
+
+자료조사
+Java -> Spring Boot
+JavaScript -> Node.js
+
+1. item:nth-child(1)
+ 아이템 마다 margin 값을 지정.
+
+2.display : inline-block
+(flex말고 inline-block으로도 가능하다)
+
+3.grid와 flex 차이점
+ flex는 1차원 적인 UI(한 방향 레이아웃)
+ grid는 2차원 적인 UI(두 방향 레이아웃)
+
+ ..(뒤로가기)
+ . (현재경로)

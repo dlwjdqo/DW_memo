@@ -1,0 +1,19 @@
+###수업
+
+1. position
+    1-1 static : 고정
+    1-2 relative : 원래위치에서 움직임
+    1-3 absolute: 자기 마음대로 움직임 
+        (부모태그가 relative면 relative 기준으로 움직임)
+    1-4 fixed : 고정(스크롤 내릴 때 마다 따라옴)
+
+2. padding, marginm, box-size
+    padding : 부모태그와 자식태그 간격 조절
+    marginm : 부모와 부모 간격조절.
+    box-size : border-box
+
+3. flex (or inline-block)
+    flex : container 와 item으로 구성 (배열)
+    container의 길이와 item 간역을 유연하게 조절
+    ***display : flex
+    
